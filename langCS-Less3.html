@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>GameLearn</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="TheQuest Gaming Magazine Template">
+	<meta name="keywords" content="gaming, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="img/logo.png" alt="logo">
+		</a>
+		<ul class="main-menu">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="characters.html">Математика</a></li>
+			<li><a href="game.html">Физика</a></li>
+			<li><a href="reviews.html">Обзоры</a></li>
+			<li><a href="news.html">Новости</a></li>
+			<li><a href="single-post.html">Страница</a></li>
+		</ul>
+	</header>
+	<!-- Header section end -->
+
+	<!-- Page top section -->
+	<section class="page-top-section set-bg" data-setbg="img/header-bg/1.jpg">
+		<div class="container">
+			<h2>Руководство С#</h2>
+		</div>
+	</section>
+	<!-- Page top section end -->
+
+	<!-- Blog section -->
+	<section class="blog-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 blog-posts">
+					<div class="blog-post featured-post">
+						<!-- <img src="img/blog/1.jpg" alt=""> -->
+						<div class="post-date">23 Марта 2021г</div>
+						<h3>Переменные и типы данных</h3>
+						<div class="post-metas">
+							<div class="post-meta">Автор: Shiz02</div>
+							<div class="post-meta">C#</a></div>
+							<div class="post-meta">Блог</div>
+							<div class="post-meta">Обучение</div>
+						</div>
+						<h3>Переменные</h3>
+						<p>Давайте представим, что нам нужно узнать за сколько машина из пункта A доедет в пункт B. Для того, чтобы сделать какие-то вычисления и найти результат, нам необходимы некоторые данные, такие как расстояние, скорость или время. Так же и в программировании. Чтобы нам делать какие-либо операции, нам нужны так называемые операнды, над которыми будут проводиться наши действия. Допустим, что мы знаешь расстояние, равное 240 киллометрам. Но ведь эта информация должна храниться где-нибудь, чтобы это знали не только мы, но и программа. Для этого в программировании есть такое понятие, как переменная:</p>
+						
+						<p class="notices"><span style="color: #92d980">Переменная</span> - это определённая ячейка в памяти компьютера, которая хранит в себе какие-то данные определённого типа.</p>
+						<p>Переменная объявляется следующим образом: </p>
+						<code>
+							<ol>
+								<li>Тип Имя = Значение; <span style="color: #92d980;">//Процесс присваивания значения переменной при её объявлении, называется <u>инициализацией</u></li>
+								<li>string MyLoveGame; <span style="color: #92d980;">// Или значения может не быть вовсе</span></li>
+								<li>MyLoveGame = "Minecraft"; <span style="color: #92d980;">// Но мы можем присвоить значения позже</span></li>
+							</ol>
+						</code>
+
+						<p>Как вы уже поняли, чтобы присвоить переменной какое-либо значение используется оператор <span style="color: #ea3c45;">присваивания</span>, а записывается одним знаком равно <span style="color: #ea3c45;">=</span>.</p>
+
+						<p>Имя переменной можно задать любое, только нужно следовать некоторым требованиям: </p>
+						
+						<ul class="blog-list">
+							<li>Имя переменной может состоять из любых цифры и буквы, а так же символа подчеркивания, однако начинаться имя переменной должно либо с букв, либо со знака подчёркивания</li>
+							<li>В имени переменной не может быть знаков пунктуации и пробелов</li>
+							<li>Имя переменной не должно совпадать с зарезервированными словами C#-па. Например, тип данных: </li>
+						</ul>
+						<code>
+							<ol>
+								<li>int int; <span style="color: #92d980;">// Так делать нельзя: программа выдаст нам ошибку</span></li>
+							</ol>
+						</code>
+
+						<p>C# - Это регистрозависимый язык, а это значит, что одинаковые имена переменных по значению, но разные по написанию, будут воспринематься как две разных переменных: </p>
+						<code>
+							<ol>
+								<li>string Name = "Павел";</li>
+								<li>string name;<span style="color: #92d980;">// Это две разных переменных!</span></li>
+							</ol>
+						</code>
+
+						<p>В ходе программы мы не можем менять имя переменной(А это вовсе нам не нужно), за то мы можем менять значение этой переменной:</p>
+						<code>
+							<ol>
+								<li>int numOne;</li>
+								<li>numOne = 4;</li>
+								<li>numOne = 6;</li>
+								<li>Console.Write("Переменная numOne равна: ");</li>
+								<li>Console.Write(numOne); <span style="color: #92d980;">// Эта строка просто выводит переменную на консоль</span></li>
+							</ol>
+						</code>
+						<div class="console">
+							<ul>
+								<li>Microsoft Windows [Version 10.0.19042.685]</li>
+								<li>(c) Корпорация Майкрософт (Microsoft Corporation), 2020. Все права защищены.</li>
+								<li><br></li>
+								<li>Переменная numOne равна: 6</li>
+							</ul>
+						</div>
+						<h3>Типы данных</h3>
+						<p>Приведём ещё одну аналогию, например у нас есть две жидкости: обычная вода и бензин. К обоим этим, так скажем, объектам, можно привести общий тип "Жидкость". Но что если у нас разные вещи? Возьмём гитару и теслу, у этих вещей явно будут разные типы: "Музыкальный инструмент" и "Автомобиль". Так и в программировании, переменные бывают разных типов. C# - Это язык со статической типезацией, то есть каждая переменная должна быть с присвоенным ей типом, который объявляется перед именем переменной.</p>
+						<p>Объявим пару переменных разных типов: </p>
+						<code>
+							<ol>
+								<li>string Hi = "Привет!";</li>
+								<li>char Simbol = 'd';</li>
+								<li>int Years = 23;</li>
+								<li>double S = 240.2;</li>
+							</ol>
+						</code>
+
+						<p>Типы данных В C#, как и во многих других ЯП, есть своя система типов данных. Есть два вида типов данных: статические и динамические. C# относится к первым - это значит, что в C# нужно явно указывать тип данных перед именем переменной. Как мы уже говорили, тип данных определяет представление о виде объекта, который нужно записать в память компьютера, например: число или строка. В C# есть две подгруппы типов данных, сегодня мы поговорим о "примитивных типах": </p>
+						<ul class="blog-list">
+							<li>int — Хранит в себе целое число от -2147483648 до 214748364. Поэтому у нас не получится записать в переменную число больше или меньше этого</li>
+							<li>uint — Если нам нужно записать число больше, чем нам может позволить тип int, то обращайтесь к этому челику. Этот тип может содержать от 0 до 4294967295. И да, этот тип не имеет возможности записать отрицательное число</li>
+							<li>long — Ну, а если вам и этого мало, то к вашему вниманию, этот тип хранит от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807</li>
+							<li>ulong — Как и в типе int, тип long не имеет отрицательного представления числа, за то он может вместить в себя от 0 до 18 446 744 073 709 551 615</li>
+							<li>short — Этот тип уже поменьше и хранит в себе от -32768 до 32767</li>
+							<li>ushort — Хранит от 0 до 65535</li>
+							<li>byte — Хранит от 0 до 255</li>
+							<li>sbyte — Хранит от -128 до 127</li>
+							<li>double — Тип чисел с плавающей точкой, который хранит в себе от ±5.0*10-324 до ±1.7*10308</li>
+							<li>float — Хранит числа с плавающей точкой от -3.4*1038 до 3.4*1038</li>
+							<li>decimal — Хранит от ±1.0*10-28 до ±7.9228*1028</li>
+							<li>char — Тип, который хранит в себе 1 символ, равный по величине в 2 байта</li>
+							<li>string — Хранит в себе набор символов</li>
+							<li>bool - Тип, который имеет два значения: true или false</li>
+						</ul>
+						<p>Пока что некоторые типы вам могут быть не понятны, но бояться не за чем, ведь на данном моменте все они вам не понадобятся.</p>
+						<p>Возможно, у вас закрался вопрос. Зачем нужно столько типов данных? А возможно, что вы уже и сами нашли на него ответ. Могут возникнуть ситуации, при которых нам не понадобится работать с большими числами, тогда использовать byte вместо int, будет куда разумнее, ведь мы сэкономим место в памяти компьютера, и большие числа тоже требуются не всегда. Однако, в наше время этим можно пренебречь, темболее на настоящем этапе обучения.</p>
+
+						<h3>Использование суффиксов</h3>
+						<p>Попробуем объявить ещё пару переменных: </p>
+						<code>
+							<ol>
+								<li>float a = 3.14F;</li>
+								<li>float b = 30.6f;</li>
+									 
+								<li>decimal c = 1005.8M;</li>
+								<li>decimal d = 334.8m;</li>
+							</ol>
+						</code>
+						<p>Как видите, когда мы инициализируем переменную, мы добавляем суффикс к её значению - это нужно, чтобы компилятор мог отличить тип float или decimal от double, потому что на самом деле по умолчанию компилятор представляет любой тип с плавающей точкой, как тип double, для того, чтобы это обойти, нужно явно указать компилятору, что это другой тип, используя суффиксы: "F" или "f" для float, "M" или "m" для decimal.</p>
+
+						<h3>Неявная типизация</h3>
+						<p>Нам не обязательно указывать тип для переменной, компилятор сам может определить тип переменной смотря на её значение, однако лучше явно указывать тип</p>
+					</div>
+				</div>
+				<div class="col-lg-4 sidebar">
+					<div class="sb-widget">
+						<form class="sb-search">
+							<input type="text" placeholder="Search">
+						</form>
+					</div>
+					<div class="sb-widget">
+						<h2 class="sb-title">Каталог</h2>
+						<ul class="sb-cata-list">
+							<li><a href="">Образование<span>0</span></a></li>
+							<li><a href="">Программирование<span>1</span></a></li>
+							<li><a href="">Спорт<span>0</span></a></li>
+							<li><a href="">Игры<span>0</span></a></li>
+							<li><a href="">Комьюнити<span>0</span></a></li>
+							<li><a href="">Без рубрики<span>0</span></a></li>
+						</ul>
+					</div>
+					<div class="sb-widget">
+						<h2 class="sb-title">Последние новости</h2>
+						<div class="latest-news-widget">
+							<div class="ln-item">
+								<img src="img/blog-thumbs/1.jpg" alt=""></span>
+								<div class="ln-text">
+									<div class="ln-date">24 Марта 2021г</div>
+									<h6>Полный курс по HTML5!</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<img src="img/blog-thumbs/2.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Полное руководство по C#!</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<img src="img/blog-thumbs/noImage.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<img src="img/blog-thumbs/noImage.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog section end -->
+
+	<!-- Blog list section -->
+	<section class="blog-list-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="small-blog-list">
+						<div class="sb-item">
+							<img src="img/blog-thumbs/noImage.jpg" alt="">
+							<div class="sb-text">
+								<div class="sb-date">21 Марта 2021г</div>
+								<h6>Lorem</h6>
+								<div class="sb-metas">
+									<div class="sb-meta">Автор: Shiz02</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. </p>
+							</div>
+						</div>
+						<div class="sb-item">
+							<img src="img/blog-thumbs/noImage.jpg" alt="">
+							<div class="sb-text">
+								<div class="sb-date">21 Марта 2021г</div>
+								<h6>Lorem</h6>
+								<div class="sb-metas">
+									<div class="sb-meta">Автор: Shiz02</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. </p>
+							</div>
+						</div>
+						<div class="sb-item">
+							<img src="img/blog-thumbs/noImage.jpg" alt="">
+							<div class="sb-text">
+								<div class="sb-date">21 Марта 2021г</div>
+								<h6>Lorem</h6>
+								<div class="sb-metas">
+									<div class="sb-meta">Автор: Shiz02</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. </p>
+							</div>
+						</div>
+						<div class="sb-item">
+							<img src="img/blog-thumbs/noImage.jpg" alt="">
+							<div class="sb-text">
+								<div class="sb-date">21 Марта 2021г</div>
+								<h6>Lorem</h6>
+								<div class="sb-metas">
+									<div class="sb-meta">Автор: Shiz02</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="sb-widget">
+						<h2 class="sb-title">ТОП 5 на этой неделе</h2>
+						<div class="latest-news-widget top-five">
+							<div class="ln-item">
+								<div class="ln-index">01</div>
+								<img src="img/blog-thumbs/1.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Полный курс по HTML5!</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+										<div class="ln-meta">WEB</div>
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<div class="ln-index">02</div>
+								<img src="img/blog-thumbs/2.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Полное руководство по C#</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+										<div class="ln-meta">Программирование</div>
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<div class="ln-index">03</div>
+								<img src="img/blog-thumbs/noImage.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<div class="ln-index">04</div>
+								<img src="img/blog-thumbs/noImage.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<div class="ln-index">05</div>
+								<img src="img/blog-thumbs/noImage.jpg" alt="">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>10 Фантастических игр</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog list section end -->
+
+	<!-- Footer section -->
+	<div class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="footer-widget">
+						<div class="about-widget">
+							<img src="img/logoFooter.png" alt="">
+							<p>Вы находитесь на сайте-блоге на который я выкладываю разные полезные и интересными материалы, как для себя, чтобы иметь быстрый доступ к ним, так и для остальных пользователей</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="footer-widget">
+						<h2 class="fw-title">Быстрые ссылки</h2>
+						<ul>
+							<li><a href="">Игры</a></li>
+							<li><a href="">Рекомендации</a></li>
+							<li><a href="">Обзоры</a></li>
+							<li><a href="">Персонажи</a></li>
+							<li><a href="">Последние новости</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="footer-widget">
+						<h2 class="fw-title">Сервисы</h2>
+						<ul>
+							<li><a href="">О нас</a></li>
+							<li><a href="">Сервисы</a></li>
+							<li><a href="">Стать писателем</a></li>
+							<li><a href="">Работы</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="footer-widget">
+						<h2 class="fw-title">Создатели</h2>
+						<ul>
+							<li><a href="">Донат</a></li>
+							<li><a href="">Сервисы</a></li>
+							<li><a href="">Подписки</a></li>
+							<li><a href="">Карьера</a></li>
+							<li><a href="">Об авторе</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget fw-latest-post">
+						<h2 class="fw-title">Usfull Links</h2>
+						<div class="latest-news-widget">
+							<div class="ln-item">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+									</div>
+								</div>
+							</div>
+							<div class="ln-item">
+								<div class="ln-text">
+									<div class="ln-date">21 Марта 2021г</div>
+									<h6>Lorem</h6>
+									<div class="ln-metas">
+										<div class="ln-meta">Автор: Shiz02</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright"><a href=""><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+		</div>
+		<div class="social-links-warp">
+			<div class="container">
+				<div class="social-links">
+					<a href="#"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="#"><i class="fa fa-pinterest"></i><span>Вконтакте</span></a>
+					<a href="#"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="#"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="#"><i class="fa fa-youtube"></i><span>youtube</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer section end -->
+															
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/code.js"></script>
+
+	</body>
+</html>
